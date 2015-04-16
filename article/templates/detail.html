@@ -1,0 +1,12 @@
+{% extends "blog/base.html" %}
+    {% block extrastyle %}
+        {{ block.super }}
+        <link rel="stylesheet" href="/static/css/article.css"/>
+        <link rel="stylesheet" href="/static/css/github.css"/>
+    {% endblock %}
+    {% block content %}
+        {{ article.text|safe }}
+    {% endblock %}
+{% block weibo %}
+    <iframe width="100%" height="1000" class="share_self" frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=1000&fansRow=1&ptype=1&speed=0&skin=1&isTitle=1&noborder=1&isWeibo=1&isFans=1&uid=1642909457&verifier=82076b55&colors=d6f3f7,ffffff,666666,0082cb,ecfbfd&dpc=1"></iframe>
+{% endblock %}
