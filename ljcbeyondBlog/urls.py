@@ -22,5 +22,4 @@ urlpatterns = patterns('',
 import os
 
 if settings.DEBUG:
-    # raise IndexError,os.path.join(settings.BASE_DIR,'static')
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
