@@ -24,4 +24,4 @@ def index(request):
     except EmptyPage:
         articles = paginator.page(paginator.num_pages)
     context['articles'] = articles
-    return render(request, 'blog/second.html',context)
+    return render(request, 'blog/articles.html',context)

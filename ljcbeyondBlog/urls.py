@@ -15,7 +15,9 @@ urlpatterns = patterns('',
                        url(r'^admin/', include(admin.site.urls)),
                        url(r'^index/', index),
                        url(r'^$', index),
-                       url(r'article/(?P<title>\S+)/$','article.views.detail')
+                       url(r'article/(?P<title>\S+)/$','article.views.detail'),
+                       url(r'^archive/(?P<year>\d{4})/(?P<month>\d{2})/$','article.views.archive'),
+                       url(r'^category/(?P<category>\S+)/$','article.views.category'),
                        )
 import os
 
