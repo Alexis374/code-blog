@@ -21,7 +21,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 SECRET_KEY = '5+*@b2koh2cy=4#f6t_&f6ukdqcnc5h5@@7u(prvvdq_-zacai'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 TEMPLATE_DEBUG = True
 
@@ -60,11 +60,11 @@ WSGI_APPLICATION = 'ljcbeyondBlog.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        # 'NAME': 'blog',
-        'NAME': os.path.join(BASE_DIR, 'blog.sqlite')
-        # 'USER': 'root',
-        # 'PASSWORD': '123456'
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'blog',
+        'USER': 'root',
+        'PASSWORD': '123456',
+        'HOST':'localhost',
     }
 }
 
